@@ -1,0 +1,32 @@
+.about-grid-container {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr); /* Two columns */
+	grid-template-rows: repeat(2, 1fr); /* Two rows */
+	gap: 1vw; /* Adjust the gap between blocks */
+	width: 100%; /* Adjust width as needed */
+	height: 100%; /* Adjust height as needed */
+    text-overflow: scroll; /* Enable text overflow scrolling */
+	padding: 3vw;
+}
+
+.about-grid-item {
+	/*background-color: #000000, 0; */ /* Background color for blocks */
+	background-color: var(--bg-color-text-divs); /* Background color for blocks */
+	/* border: 1px solid #cccccc0f;  Border around blocks */
+	border-radius: 0.5vw; /* Rounded corners for blocks */
+
+	width: 100%; /* Adjust width as needed */
+
+	box-shadow: var(--box-shadow); /* Box shadow for depth */
+	-webkit-animation-name: animatetop;
+	-webkit-animation-duration: 0.4s;
+	animation-name: animatetop;
+	animation-duration: 0.15s;
+
+	align-items: left;
+	text-align: left;
+
+	padding: 1vw;
+	tab-size: 1vw;
+	
+}

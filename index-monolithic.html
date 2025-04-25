@@ -1,0 +1,1359 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>
+			Responsive Website with Hero Slides, Snowflakes, and Right Nav - by TGM
+			Group
+		</title>
+		<link rel="stylesheet" href="styles.css" />
+		<script src="https://unpkg.com/lodash@4.17.21/lodash.min.js"></script>
+		<script type="text/javascript" src="scripts.js"></script>
+		<script>
+			(function () {
+				try {
+					const savedTheme = localStorage.getItem("theme");
+					const prefersDark = window.matchMedia(
+						"(prefers-color-scheme: dark)"
+					).matches;
+					if (savedTheme === "dark" || (!savedTheme && prefersDark)) {
+						document.documentElement.classList.add("dark");
+					} else if (savedTheme === "light") {
+						document.documentElement.classList.remove("dark");
+					} else {
+						// Default to dark if nothing set and system isn't dark
+						document.documentElement.classList.add("dark");
+					}
+				} catch (e) {
+					console.error("Error applying initial theme class:", e);
+				}
+			})();
+		</script>
+	</head>
+	<body>
+		<nav id="icon-nav">
+			<a
+				href="https://impress.isesaki.in"
+				aria-label="Impress Magazine Gallery"
+				class="slide-nav-trigger"
+				data-target-slide="slide-alpha"
+				>&#128213;</a
+			>
+			<a
+				href="#"
+				aria-label="Front Cover"
+				class="slide-nav-trigger"
+				data-target-slide="slide-front"
+				>&#x23EA;</a
+			>
+
+			<a
+				href="#"
+				aria-label="Page 1"
+				class="slide-nav-trigger"
+				data-target-slide="slide-1"
+				>&#x0031;</a
+			>
+			<a
+				href="#"
+				aria-label="Page 2"
+				class="slide-nav-trigger"
+				data-target-slide="slide-2"
+				>&#x0032;</a
+			>
+			<a
+				href="#"
+				aria-label="Page 3"
+				class="slide-nav-trigger"
+				data-target-slide="slide-3"
+				>&#x0033;</a
+			>
+			<a
+				href="#"
+				aria-label="Page 5"
+				class="slide-nav-trigger"
+				data-target-slide="slide-5"
+				>&#x0035;</a
+			>
+			<a
+				href="#"
+				aria-label="Page 6"
+				class="slide-nav-trigger"
+				data-target-slide="slide-6"
+				>&#x0036;</a
+			>
+			<a
+				href="#"
+				aria-label="Back Cover"
+				class="slide-nav-trigger"
+				data-target-slide="slide-back"
+				>&#x23E9;</a
+			>
+			<a
+				href="#"
+				aria-label="About"
+				class="slide-nav-trigger"
+				data-target-slide="slide-about"
+				>&#128209;</a
+			>
+
+			<button id="theme-toggle" aria-label="Switch theme"></button>
+
+			<button id="snow-toggle" aria-label="Toggle Snowflakes">&#x2744;</button>
+		</nav>
+
+		<main id="hero">
+			<div class="slides-container">
+				<div class="slide active" id="slide-front">
+					<div id="container">
+						<!-- Your website content goes here -->
+
+						<div class="item sidebar sidebar-left"></div>
+
+						<div class="item gap-left"></div>
+
+						<div
+							class="item content-center"
+							style="
+								background-image: url('Web/page00.jpg');
+								background-size: contain;
+								background-position: center;
+								background-repeat: no-repeat;
+								background-color: #000000;
+							"
+						>
+							<div class="left-content">
+								<div class="items hidden-text" id="text1-0">
+									<!-- Modal content -->
+									<div class="modal-content">
+										<div class="modal-header">
+											<span
+												class="close clickable"
+												onClick="ResetPlayAndShow('audio1-0', 'text1-0', 'play1-0'), ResetPlayAndShow('audio1-0', 'text1-0', 'play1-0a')"
+												>&times;</span
+											>
+											<span
+												class="modal-play-left clickable"
+												onClick="PlaySound('audio1-0', 'play1-0a')"
+												><img
+													id="play1-0a"
+													class="audio-button-image clickable"
+													src="nav-images/play-g79150a13d_1280.png"
+											/></span>
+										</div>
+
+										<div class="modal-body">
+											<h3>About This Issue</h3>
+											<p
+												style="
+													font-size: 3.5vh;
+													text-align: left;
+													text-indent: 0.9vw;
+													margin: 0.1vh;
+													padding: 1vh;
+												"
+											>
+												Hello, this is George, and thanks for reading this
+												<i>Winter, 2025</i> issue of <i>Impress</i>.
+											</p>
+											<p
+												style="
+													font-size: 3.5vh;
+													text-align: left;
+													text-indent: 0.9vw;
+													margin: 0.1vh;
+													padding: 1vh;
+												"
+											>
+												This issue is a collection of stories about winter
+												events. Read on to learn about Jewish winter holiday
+												traditions, a pooping log, and special holidays about
+												love.
+											</p>
+											<p
+												style="
+													font-size: 3.5vh;
+													text-align: left;
+													text-indent: 0.9vw;
+													margin: 0.1vh;
+													padding: 1vh;
+												"
+											>
+												Then take a look at all the different New Year's Days in
+												different cultures. The calendar year changes on January
+												first, but different countries start their own new years
+												on different days.
+											</p>
+											<p
+												style="
+													font-size: 3.5vh;
+													text-align: left;
+													text-indent: 0.9vw;
+													margin: 0.1vh;
+													padding: 1vh;
+												"
+											>
+												Last, take a look at some of the excellent haiku poems
+												students and teachers wrote for us!
+											</p>
+											<p
+												style="
+													font-size: 3.5vh;
+													text-align: left;
+													text-indent: 0.9vw;
+													margin: 0.1vh;
+													padding: 1vh;
+												"
+											>
+												We hope you enjoy reading this issue, and we hope to
+												hear what you think about it! We'd love to hear your
+												comments and ideas for the next issue.
+											</p>
+										</div>
+										<div class="modal-footer"></div>
+									</div>
+								</div>
+
+								<!-- Audio for Intro Text -->
+
+								<audio id="audio1-0" class="playondemand">
+									<source src="./audio/audio0-1.mp3" type="audio/mp3" />
+								</audio>
+							</div>
+						</div>
+					</div>
+
+					<div class="item sidebar sidebar-right">
+						<!-- Buttons for Intro Text -->
+
+						<button
+							class="center-items right-nav-buttons clickable"
+							type="button"
+							onClick="PlayAndShow('audio1-0', 'text1-0', 'play1-0')"
+							style="position: absolute; top: 5vw; left: 89vw"
+						>
+							<img
+								id="play1-0"
+								class="audio-button-image clickable"
+								src="nav-images/play-g79150a13d_1280.png"
+							/>
+							<h6 style="text-align: center">Introduction</h6>
+						</button>
+					</div>
+				</div>
+
+				<div class="slide" id="slide-1">
+					<div id="container">
+						<!-- Your website content goes here -->
+
+						<div class="item sidebar sidebar-left"></div>
+
+						<div class="item gap-left"></div>
+
+						<div
+							class="item content-center"
+							style="
+								background-image: url('Web/page00.jpg');
+								background-size: contain;
+								background-position: center;
+								background-repeat: no-repeat;
+								background-color: #000000;
+							"
+						>
+							<div class="left-content">
+								<div class="items hidden-text" id="text1-0">
+									<!-- Modal content -->
+									<div class="modal-content">
+										<div class="modal-header">
+											<span
+												class="close clickable"
+												onClick="ResetPlayAndShow('audio1-0', 'text1-0', 'play1-0'), ResetPlayAndShow('audio1-0', 'text1-0', 'play1-0a')"
+												>&times;</span
+											>
+											<span
+												class="modal-play-left clickable"
+												onClick="PlaySound('audio1-0', 'play1-0a')"
+												><img
+													id="play1-0a"
+													class="audio-button-image clickable"
+													src="nav-images/play-g79150a13d_1280.png"
+											/></span>
+										</div>
+
+										<div class="modal-body">
+											<h3>About This Issue</h3>
+											<p
+												style="
+													font-size: 3.5vh;
+													text-align: left;
+													text-indent: 0.9vw;
+													margin: 0.1vh;
+													padding: 1vh;
+												"
+											>
+												Hello, this is George, and thanks for reading this
+												<i>Winter, 2025</i> issue of <i>Impress</i>.
+											</p>
+											<p
+												style="
+													font-size: 3.5vh;
+													text-align: left;
+													text-indent: 0.9vw;
+													margin: 0.1vh;
+													padding: 1vh;
+												"
+											>
+												This issue is a collection of stories about winter
+												events. Read on to learn about Jewish winter holiday
+												traditions, a pooping log, and special holidays about
+												love.
+											</p>
+											<p
+												style="
+													font-size: 3.5vh;
+													text-align: left;
+													text-indent: 0.9vw;
+													margin: 0.1vh;
+													padding: 1vh;
+												"
+											>
+												Then take a look at all the different New Year's Days in
+												different cultures. The calendar year changes on January
+												first, but different countries start their own new years
+												on different days.
+											</p>
+											<p
+												style="
+													font-size: 3.5vh;
+													text-align: left;
+													text-indent: 0.9vw;
+													margin: 0.1vh;
+													padding: 1vh;
+												"
+											>
+												Last, take a look at some of the excellent haiku poems
+												students and teachers wrote for us!
+											</p>
+											<p
+												style="
+													font-size: 3.5vh;
+													text-align: left;
+													text-indent: 0.9vw;
+													margin: 0.1vh;
+													padding: 1vh;
+												"
+											>
+												We hope you enjoy reading this issue, and we hope to
+												hear what you think about it! We'd love to hear your
+												comments and ideas for the next issue.
+											</p>
+										</div>
+										<div class="modal-footer"></div>
+									</div>
+								</div>
+
+								<!-- Audio for Intro Text -->
+
+								<audio id="audio1-0" class="playondemand">
+									<source src="./audio/audio0-1.mp3" type="audio/mp3" />
+								</audio>
+							</div>
+						</div>
+					</div>
+
+					<div class="item sidebar sidebar-right">
+						<!-- Buttons for Intro Text -->
+
+						<button
+							class="center-items right-nav-buttons clickable"
+							type="button"
+							onClick="PlayAndShow('audio1-0', 'text1-0', 'play1-0')"
+							style="position: absolute; top: 5vw; left: 89vw"
+						>
+							<img
+								id="play1-0"
+								class="audio-button-image clickable"
+								src="nav-images/play-g79150a13d_1280.png"
+							/>
+							<h6 style="text-align: center">Introduction</h6>
+						</button>
+					</div>
+				</div>
+
+				<div class="slide" id="slide-2">
+					<div id="container">
+						<!-- Your website content goes here -->
+
+						<div class="item sidebar sidebar-left"></div>
+
+						<div class="item gap-left"></div>
+
+						<div
+							class="item content-center"
+							style="
+								background-image: url('Web/page00.jpg');
+								background-size: contain;
+								background-position: center;
+								background-repeat: no-repeat;
+								background-color: #000000;
+							"
+						>
+							<div class="left-content">
+								<div class="items hidden-text" id="text1-0">
+									<!-- Modal content -->
+									<div class="modal-content">
+										<div class="modal-header">
+											<span
+												class="close clickable"
+												onClick="ResetPlayAndShow('audio1-0', 'text1-0', 'play1-0'), ResetPlayAndShow('audio1-0', 'text1-0', 'play1-0a')"
+												>&times;</span
+											>
+											<span
+												class="modal-play-left clickable"
+												onClick="PlaySound('audio1-0', 'play1-0a')"
+												><img
+													id="play1-0a"
+													class="audio-button-image clickable"
+													src="nav-images/play-g79150a13d_1280.png"
+											/></span>
+										</div>
+
+										<div class="modal-body">
+											<h3>About This Issue</h3>
+											<p
+												style="
+													font-size: 3.5vh;
+													text-align: left;
+													text-indent: 0.9vw;
+													margin: 0.1vh;
+													padding: 1vh;
+												"
+											>
+												Hello, this is George, and thanks for reading this
+												<i>Winter, 2025</i> issue of <i>Impress</i>.
+											</p>
+											<p
+												style="
+													font-size: 3.5vh;
+													text-align: left;
+													text-indent: 0.9vw;
+													margin: 0.1vh;
+													padding: 1vh;
+												"
+											>
+												This issue is a collection of stories about winter
+												events. Read on to learn about Jewish winter holiday
+												traditions, a pooping log, and special holidays about
+												love.
+											</p>
+											<p
+												style="
+													font-size: 3.5vh;
+													text-align: left;
+													text-indent: 0.9vw;
+													margin: 0.1vh;
+													padding: 1vh;
+												"
+											>
+												Then take a look at all the different New Year's Days in
+												different cultures. The calendar year changes on January
+												first, but different countries start their own new years
+												on different days.
+											</p>
+											<p
+												style="
+													font-size: 3.5vh;
+													text-align: left;
+													text-indent: 0.9vw;
+													margin: 0.1vh;
+													padding: 1vh;
+												"
+											>
+												Last, take a look at some of the excellent haiku poems
+												students and teachers wrote for us!
+											</p>
+											<p
+												style="
+													font-size: 3.5vh;
+													text-align: left;
+													text-indent: 0.9vw;
+													margin: 0.1vh;
+													padding: 1vh;
+												"
+											>
+												We hope you enjoy reading this issue, and we hope to
+												hear what you think about it! We'd love to hear your
+												comments and ideas for the next issue.
+											</p>
+										</div>
+										<div class="modal-footer"></div>
+									</div>
+								</div>
+
+								<!-- Audio for Intro Text -->
+
+								<audio id="audio1-0" class="playondemand">
+									<source src="./audio/audio0-1.mp3" type="audio/mp3" />
+								</audio>
+							</div>
+						</div>
+					</div>
+
+					<div class="item sidebar sidebar-right">
+						<!-- Buttons for Intro Text -->
+
+						<button
+							class="center-items right-nav-buttons clickable"
+							type="button"
+							onClick="PlayAndShow('audio1-0', 'text1-0', 'play1-0')"
+							style="position: absolute; top: 5vw; left: 89vw"
+						>
+							<img
+								id="play1-0"
+								class="audio-button-image clickable"
+								src="nav-images/play-g79150a13d_1280.png"
+							/>
+							<h6 style="text-align: center">Introduction</h6>
+						</button>
+					</div>
+				</div>
+
+				<div class="slide" id="slide-3">
+					<div id="container">
+						<!-- Your website content goes here -->
+
+						<div class="item sidebar sidebar-left"></div>
+
+						<div class="item gap-left"></div>
+
+						<div
+							class="item content-center"
+							style="
+								background-image: url('Web/page00.jpg');
+								background-size: contain;
+								background-position: center;
+								background-repeat: no-repeat;
+								background-color: #000000;
+							"
+						>
+							<div class="left-content">
+								<div class="items hidden-text" id="text1-0">
+									<!-- Modal content -->
+									<div class="modal-content">
+										<div class="modal-header">
+											<span
+												class="close clickable"
+												onClick="ResetPlayAndShow('audio1-0', 'text1-0', 'play1-0'), ResetPlayAndShow('audio1-0', 'text1-0', 'play1-0a')"
+												>&times;</span
+											>
+											<span
+												class="modal-play-left clickable"
+												onClick="PlaySound('audio1-0', 'play1-0a')"
+												><img
+													id="play1-0a"
+													class="audio-button-image clickable"
+													src="nav-images/play-g79150a13d_1280.png"
+											/></span>
+										</div>
+
+										<div class="modal-body">
+											<h3>About This Issue</h3>
+											<p
+												style="
+													font-size: 3.5vh;
+													text-align: left;
+													text-indent: 0.9vw;
+													margin: 0.1vh;
+													padding: 1vh;
+												"
+											>
+												Hello, this is George, and thanks for reading this
+												<i>Winter, 2025</i> issue of <i>Impress</i>.
+											</p>
+											<p
+												style="
+													font-size: 3.5vh;
+													text-align: left;
+													text-indent: 0.9vw;
+													margin: 0.1vh;
+													padding: 1vh;
+												"
+											>
+												This issue is a collection of stories about winter
+												events. Read on to learn about Jewish winter holiday
+												traditions, a pooping log, and special holidays about
+												love.
+											</p>
+											<p
+												style="
+													font-size: 3.5vh;
+													text-align: left;
+													text-indent: 0.9vw;
+													margin: 0.1vh;
+													padding: 1vh;
+												"
+											>
+												Then take a look at all the different New Year's Days in
+												different cultures. The calendar year changes on January
+												first, but different countries start their own new years
+												on different days.
+											</p>
+											<p
+												style="
+													font-size: 3.5vh;
+													text-align: left;
+													text-indent: 0.9vw;
+													margin: 0.1vh;
+													padding: 1vh;
+												"
+											>
+												Last, take a look at some of the excellent haiku poems
+												students and teachers wrote for us!
+											</p>
+											<p
+												style="
+													font-size: 3.5vh;
+													text-align: left;
+													text-indent: 0.9vw;
+													margin: 0.1vh;
+													padding: 1vh;
+												"
+											>
+												We hope you enjoy reading this issue, and we hope to
+												hear what you think about it! We'd love to hear your
+												comments and ideas for the next issue.
+											</p>
+										</div>
+										<div class="modal-footer"></div>
+									</div>
+								</div>
+
+								<!-- Audio for Intro Text -->
+
+								<audio id="audio1-0" class="playondemand">
+									<source src="./audio/audio0-1.mp3" type="audio/mp3" />
+								</audio>
+							</div>
+						</div>
+					</div>
+
+					<div class="item sidebar sidebar-right">
+						<!-- Buttons for Intro Text -->
+
+						<button
+							class="center-items right-nav-buttons clickable"
+							type="button"
+							onClick="PlayAndShow('audio1-0', 'text1-0', 'play1-0')"
+							style="position: absolute; top: 5vw; left: 89vw"
+						>
+							<img
+								id="play1-0"
+								class="audio-button-image clickable"
+								src="nav-images/play-g79150a13d_1280.png"
+							/>
+							<h6 style="text-align: center">Introduction</h6>
+						</button>
+					</div>
+				</div>
+
+				<div class="slide" id="slide-4">
+					<div id="container">
+						<!-- Your website content goes here -->
+
+						<div class="item sidebar sidebar-left"></div>
+
+						<div class="item gap-left"></div>
+
+						<div
+							class="item content-center"
+							style="
+								background-image: url('Web/page00.jpg');
+								background-size: contain;
+								background-position: center;
+								background-repeat: no-repeat;
+								background-color: #000000;
+							"
+						>
+							<div class="left-content">
+								<div class="items hidden-text" id="text1-0">
+									<!-- Modal content -->
+									<div class="modal-content">
+										<div class="modal-header">
+											<span
+												class="close clickable"
+												onClick="ResetPlayAndShow('audio1-0', 'text1-0', 'play1-0'), ResetPlayAndShow('audio1-0', 'text1-0', 'play1-0a')"
+												>&times;</span
+											>
+											<span
+												class="modal-play-left clickable"
+												onClick="PlaySound('audio1-0', 'play1-0a')"
+												><img
+													id="play1-0a"
+													class="audio-button-image clickable"
+													src="nav-images/play-g79150a13d_1280.png"
+											/></span>
+										</div>
+
+										<div class="modal-body">
+											<h3>About This Issue</h3>
+											<p
+												style="
+													font-size: 3.5vh;
+													text-align: left;
+													text-indent: 0.9vw;
+													margin: 0.1vh;
+													padding: 1vh;
+												"
+											>
+												Hello, this is George, and thanks for reading this
+												<i>Winter, 2025</i> issue of <i>Impress</i>.
+											</p>
+											<p
+												style="
+													font-size: 3.5vh;
+													text-align: left;
+													text-indent: 0.9vw;
+													margin: 0.1vh;
+													padding: 1vh;
+												"
+											>
+												This issue is a collection of stories about winter
+												events. Read on to learn about Jewish winter holiday
+												traditions, a pooping log, and special holidays about
+												love.
+											</p>
+											<p
+												style="
+													font-size: 3.5vh;
+													text-align: left;
+													text-indent: 0.9vw;
+													margin: 0.1vh;
+													padding: 1vh;
+												"
+											>
+												Then take a look at all the different New Year's Days in
+												different cultures. The calendar year changes on January
+												first, but different countries start their own new years
+												on different days.
+											</p>
+											<p
+												style="
+													font-size: 3.5vh;
+													text-align: left;
+													text-indent: 0.9vw;
+													margin: 0.1vh;
+													padding: 1vh;
+												"
+											>
+												Last, take a look at some of the excellent haiku poems
+												students and teachers wrote for us!
+											</p>
+											<p
+												style="
+													font-size: 3.5vh;
+													text-align: left;
+													text-indent: 0.9vw;
+													margin: 0.1vh;
+													padding: 1vh;
+												"
+											>
+												We hope you enjoy reading this issue, and we hope to
+												hear what you think about it! We'd love to hear your
+												comments and ideas for the next issue.
+											</p>
+										</div>
+										<div class="modal-footer"></div>
+									</div>
+								</div>
+
+								<!-- Audio for Intro Text -->
+
+								<audio id="audio1-0" class="playondemand">
+									<source src="./audio/audio0-1.mp3" type="audio/mp3" />
+								</audio>
+							</div>
+						</div>
+					</div>
+
+					<div class="item sidebar sidebar-right">
+						<!-- Buttons for Intro Text -->
+
+						<button
+							class="center-items right-nav-buttons clickable"
+							type="button"
+							onClick="PlayAndShow('audio1-0', 'text1-0', 'play1-0')"
+							style="position: absolute; top: 5vw; left: 89vw"
+						>
+							<img
+								id="play1-0"
+								class="audio-button-image clickable"
+								src="nav-images/play-g79150a13d_1280.png"
+							/>
+							<h6 style="text-align: center">Introduction</h6>
+						</button>
+					</div>
+				</div>
+
+				<div class="slide" id="slide-5">
+					<div id="container">
+						<!-- Your website content goes here -->
+
+						<div class="item sidebar sidebar-left"></div>
+
+						<div class="item gap-left"></div>
+
+						<div
+							class="item content-center"
+							style="
+								background-image: url('Web/page00.jpg');
+								background-size: contain;
+								background-position: center;
+								background-repeat: no-repeat;
+								background-color: #000000;
+							"
+						>
+							<div class="left-content">
+								<div class="items hidden-text" id="text1-0">
+									<!-- Modal content -->
+									<div class="modal-content">
+										<div class="modal-header">
+											<span
+												class="close clickable"
+												onClick="ResetPlayAndShow('audio1-0', 'text1-0', 'play1-0'), ResetPlayAndShow('audio1-0', 'text1-0', 'play1-0a')"
+												>&times;</span
+											>
+											<span
+												class="modal-play-left clickable"
+												onClick="PlaySound('audio1-0', 'play1-0a')"
+												><img
+													id="play1-0a"
+													class="audio-button-image clickable"
+													src="nav-images/play-g79150a13d_1280.png"
+											/></span>
+										</div>
+
+										<div class="modal-body">
+											<h3>About This Issue</h3>
+											<p
+												style="
+													font-size: 3.5vh;
+													text-align: left;
+													text-indent: 0.9vw;
+													margin: 0.1vh;
+													padding: 1vh;
+												"
+											>
+												Hello, this is George, and thanks for reading this
+												<i>Winter, 2025</i> issue of <i>Impress</i>.
+											</p>
+											<p
+												style="
+													font-size: 3.5vh;
+													text-align: left;
+													text-indent: 0.9vw;
+													margin: 0.1vh;
+													padding: 1vh;
+												"
+											>
+												This issue is a collection of stories about winter
+												events. Read on to learn about Jewish winter holiday
+												traditions, a pooping log, and special holidays about
+												love.
+											</p>
+											<p
+												style="
+													font-size: 3.5vh;
+													text-align: left;
+													text-indent: 0.9vw;
+													margin: 0.1vh;
+													padding: 1vh;
+												"
+											>
+												Then take a look at all the different New Year's Days in
+												different cultures. The calendar year changes on January
+												first, but different countries start their own new years
+												on different days.
+											</p>
+											<p
+												style="
+													font-size: 3.5vh;
+													text-align: left;
+													text-indent: 0.9vw;
+													margin: 0.1vh;
+													padding: 1vh;
+												"
+											>
+												Last, take a look at some of the excellent haiku poems
+												students and teachers wrote for us!
+											</p>
+											<p
+												style="
+													font-size: 3.5vh;
+													text-align: left;
+													text-indent: 0.9vw;
+													margin: 0.1vh;
+													padding: 1vh;
+												"
+											>
+												We hope you enjoy reading this issue, and we hope to
+												hear what you think about it! We'd love to hear your
+												comments and ideas for the next issue.
+											</p>
+										</div>
+										<div class="modal-footer"></div>
+									</div>
+								</div>
+
+								<!-- Audio for Intro Text -->
+
+								<audio id="audio1-0" class="playondemand">
+									<source src="./audio/audio0-1.mp3" type="audio/mp3" />
+								</audio>
+							</div>
+						</div>
+					</div>
+
+					<div class="item sidebar sidebar-right">
+						<!-- Buttons for Intro Text -->
+
+						<button
+							class="center-items right-nav-buttons clickable"
+							type="button"
+							onClick="PlayAndShow('audio1-0', 'text1-0', 'play1-0')"
+							style="position: absolute; top: 5vw; left: 89vw"
+						>
+							<img
+								id="play1-0"
+								class="audio-button-image clickable"
+								src="nav-images/play-g79150a13d_1280.png"
+							/>
+							<h6 style="text-align: center">Introduction</h6>
+						</button>
+					</div>
+				</div>
+
+				<div class="slide" id="slide-6">
+					<div id="container">
+						<!-- Your website content goes here -->
+
+						<div class="item sidebar sidebar-left"></div>
+
+						<div class="item gap-left"></div>
+
+						<div
+							class="item content-center"
+							style="
+								background-image: url('Web/page00.jpg');
+								background-size: contain;
+								background-position: center;
+								background-repeat: no-repeat;
+								background-color: #000000;
+							"
+						>
+							<div class="left-content">
+								<div class="items hidden-text" id="text1-0">
+									<!-- Modal content -->
+									<div class="modal-content">
+										<div class="modal-header">
+											<span
+												class="close clickable"
+												onClick="ResetPlayAndShow('audio1-0', 'text1-0', 'play1-0'), ResetPlayAndShow('audio1-0', 'text1-0', 'play1-0a')"
+												>&times;</span
+											>
+											<span
+												class="modal-play-left clickable"
+												onClick="PlaySound('audio1-0', 'play1-0a')"
+												><img
+													id="play1-0a"
+													class="audio-button-image clickable"
+													src="nav-images/play-g79150a13d_1280.png"
+											/></span>
+										</div>
+
+										<div class="modal-body">
+											<h3>About This Issue</h3>
+											<p
+												style="
+													font-size: 3.5vh;
+													text-align: left;
+													text-indent: 0.9vw;
+													margin: 0.1vh;
+													padding: 1vh;
+												"
+											>
+												Hello, this is George, and thanks for reading this
+												<i>Winter, 2025</i> issue of <i>Impress</i>.
+											</p>
+											<p
+												style="
+													font-size: 3.5vh;
+													text-align: left;
+													text-indent: 0.9vw;
+													margin: 0.1vh;
+													padding: 1vh;
+												"
+											>
+												This issue is a collection of stories about winter
+												events. Read on to learn about Jewish winter holiday
+												traditions, a pooping log, and special holidays about
+												love.
+											</p>
+											<p
+												style="
+													font-size: 3.5vh;
+													text-align: left;
+													text-indent: 0.9vw;
+													margin: 0.1vh;
+													padding: 1vh;
+												"
+											>
+												Then take a look at all the different New Year's Days in
+												different cultures. The calendar year changes on January
+												first, but different countries start their own new years
+												on different days.
+											</p>
+											<p
+												style="
+													font-size: 3.5vh;
+													text-align: left;
+													text-indent: 0.9vw;
+													margin: 0.1vh;
+													padding: 1vh;
+												"
+											>
+												Last, take a look at some of the excellent haiku poems
+												students and teachers wrote for us!
+											</p>
+											<p
+												style="
+													font-size: 3.5vh;
+													text-align: left;
+													text-indent: 0.9vw;
+													margin: 0.1vh;
+													padding: 1vh;
+												"
+											>
+												We hope you enjoy reading this issue, and we hope to
+												hear what you think about it! We'd love to hear your
+												comments and ideas for the next issue.
+											</p>
+										</div>
+										<div class="modal-footer"></div>
+									</div>
+								</div>
+
+								<!-- Audio for Intro Text -->
+
+								<audio id="audio1-0" class="playondemand">
+									<source src="./audio/audio0-1.mp3" type="audio/mp3" />
+								</audio>
+							</div>
+						</div>
+					</div>
+
+					<div class="item sidebar sidebar-right">
+						<!-- Buttons for Intro Text -->
+
+						<button
+							class="center-items right-nav-buttons clickable"
+							type="button"
+							onClick="PlayAndShow('audio1-0', 'text1-0', 'play1-0')"
+							style="position: absolute; top: 5vw; left: 89vw"
+						>
+							<img
+								id="play1-0"
+								class="audio-button-image clickable"
+								src="nav-images/play-g79150a13d_1280.png"
+							/>
+							<h6 style="text-align: center">Introduction</h6>
+						</button>
+					</div>
+				</div>
+
+				<div class="slide" id="slide-back">
+					<div id="container">
+						<!-- Your website content goes here -->
+
+						<div class="item sidebar sidebar-left"></div>
+
+						<div class="item gap-left"></div>
+
+						<div
+							class="item content-center"
+							style="
+								background-image: url('Web/page00.jpg');
+								background-size: contain;
+								background-position: center;
+								background-repeat: no-repeat;
+								background-color: #000000;
+							"
+						>
+							<div class="left-content">
+								<div class="items hidden-text" id="text1-0">
+									<!-- Modal content -->
+									<div class="modal-content">
+										<div class="modal-header">
+											<span
+												class="close clickable"
+												onClick="ResetPlayAndShow('audio1-0', 'text1-0', 'play1-0'), ResetPlayAndShow('audio1-0', 'text1-0', 'play1-0a')"
+												>&times;</span
+											>
+											<span
+												class="modal-play-left clickable"
+												onClick="PlaySound('audio1-0', 'play1-0a')"
+												><img
+													id="play1-0a"
+													class="audio-button-image clickable"
+													src="nav-images/play-g79150a13d_1280.png"
+											/></span>
+										</div>
+
+										<div class="modal-body">
+											<h3>About This Issue</h3>
+											<p
+												style="
+													font-size: 3.5vh;
+													text-align: left;
+													text-indent: 0.9vw;
+													margin: 0.1vh;
+													padding: 1vh;
+												"
+											>
+												Hello, this is George, and thanks for reading this
+												<i>Winter, 2025</i> issue of <i>Impress</i>.
+											</p>
+											<p
+												style="
+													font-size: 3.5vh;
+													text-align: left;
+													text-indent: 0.9vw;
+													margin: 0.1vh;
+													padding: 1vh;
+												"
+											>
+												This issue is a collection of stories about winter
+												events. Read on to learn about Jewish winter holiday
+												traditions, a pooping log, and special holidays about
+												love.
+											</p>
+											<p
+												style="
+													font-size: 3.5vh;
+													text-align: left;
+													text-indent: 0.9vw;
+													margin: 0.1vh;
+													padding: 1vh;
+												"
+											>
+												Then take a look at all the different New Year's Days in
+												different cultures. The calendar year changes on January
+												first, but different countries start their own new years
+												on different days.
+											</p>
+											<p
+												style="
+													font-size: 3.5vh;
+													text-align: left;
+													text-indent: 0.9vw;
+													margin: 0.1vh;
+													padding: 1vh;
+												"
+											>
+												Last, take a look at some of the excellent haiku poems
+												students and teachers wrote for us!
+											</p>
+											<p
+												style="
+													font-size: 3.5vh;
+													text-align: left;
+													text-indent: 0.9vw;
+													margin: 0.1vh;
+													padding: 1vh;
+												"
+											>
+												We hope you enjoy reading this issue, and we hope to
+												hear what you think about it! We'd love to hear your
+												comments and ideas for the next issue.
+											</p>
+										</div>
+										<div class="modal-footer"></div>
+									</div>
+								</div>
+
+								<!-- Audio for Intro Text -->
+
+								<audio id="audio1-0" class="playondemand">
+									<source src="./audio/audio0-1.mp3" type="audio/mp3" />
+								</audio>
+							</div>
+						</div>
+					</div>
+
+					<div class="item sidebar sidebar-right">
+						<!-- Buttons for Intro Text -->
+
+						<button
+							class="center-items right-nav-buttons clickable"
+							type="button"
+							onClick="PlayAndShow('audio1-0', 'text1-0', 'play1-0')"
+							style="position: absolute; top: 5vw; left: 89vw"
+						>
+							<img
+								id="play1-0"
+								class="audio-button-image clickable"
+								src="nav-images/play-g79150a13d_1280.png"
+							/>
+							<h6 style="text-align: center">Introduction</h6>
+						</button>
+					</div>
+				</div>
+
+				<div class="slide" id="slide-about">
+					<div id="container">
+						<!-- Your website content goes here -->
+
+						<div class="item sidebar sidebar-left"></div>
+
+						<div class="item gap-left"></div>
+
+						<div
+							class="item content-center"
+							style="
+								background-image: url('Web/page00.jpg');
+								background-size: contain;
+								background-position: center;
+								background-repeat: no-repeat;
+								background-color: #000000;
+							"
+						>
+							<div class="left-content">
+								<div class="items hidden-text" id="text1-0">
+									<!-- Modal content -->
+									<div class="modal-content">
+										<div class="modal-header">
+											<span
+												class="close clickable"
+												onClick="ResetPlayAndShow('audio1-0', 'text1-0', 'play1-0'), ResetPlayAndShow('audio1-0', 'text1-0', 'play1-0a')"
+												>&times;</span
+											>
+											<span
+												class="modal-play-left clickable"
+												onClick="PlaySound('audio1-0', 'play1-0a')"
+												><img
+													id="play1-0a"
+													class="audio-button-image clickable"
+													src="nav-images/play-g79150a13d_1280.png"
+											/></span>
+										</div>
+
+										<div class="modal-body">
+											<h3>About This Issue</h3>
+											<p
+												style="
+													font-size: 3.5vh;
+													text-align: left;
+													text-indent: 0.9vw;
+													margin: 0.1vh;
+													padding: 1vh;
+												"
+											>
+												Hello, this is George, and thanks for reading this
+												<i>Winter, 2025</i> issue of <i>Impress</i>.
+											</p>
+											<p
+												style="
+													font-size: 3.5vh;
+													text-align: left;
+													text-indent: 0.9vw;
+													margin: 0.1vh;
+													padding: 1vh;
+												"
+											>
+												This issue is a collection of stories about winter
+												events. Read on to learn about Jewish winter holiday
+												traditions, a pooping log, and special holidays about
+												love.
+											</p>
+											<p
+												style="
+													font-size: 3.5vh;
+													text-align: left;
+													text-indent: 0.9vw;
+													margin: 0.1vh;
+													padding: 1vh;
+												"
+											>
+												Then take a look at all the different New Year's Days in
+												different cultures. The calendar year changes on January
+												first, but different countries start their own new years
+												on different days.
+											</p>
+											<p
+												style="
+													font-size: 3.5vh;
+													text-align: left;
+													text-indent: 0.9vw;
+													margin: 0.1vh;
+													padding: 1vh;
+												"
+											>
+												Last, take a look at some of the excellent haiku poems
+												students and teachers wrote for us!
+											</p>
+											<p
+												style="
+													font-size: 3.5vh;
+													text-align: left;
+													text-indent: 0.9vw;
+													margin: 0.1vh;
+													padding: 1vh;
+												"
+											>
+												We hope you enjoy reading this issue, and we hope to
+												hear what you think about it! We'd love to hear your
+												comments and ideas for the next issue.
+											</p>
+										</div>
+										<div class="modal-footer"></div>
+									</div>
+								</div>
+
+								<!-- Audio for Intro Text -->
+
+								<audio id="audio1-0" class="playondemand">
+									<source src="./audio/audio0-1.mp3" type="audio/mp3" />
+								</audio>
+							</div>
+						</div>
+					</div>
+
+					<div class="item sidebar sidebar-right">
+						<!-- Buttons for Intro Text -->
+
+						<button
+							class="center-items right-nav-buttons clickable"
+							type="button"
+							onClick="PlayAndShow('audio1-0', 'text1-0', 'play1-0')"
+							style="position: absolute; top: 5vw; left: 89vw"
+						>
+							<img
+								id="play1-0"
+								class="audio-button-image clickable"
+								src="nav-images/play-g79150a13d_1280.png"
+							/>
+							<h6 style="text-align: center">Introduction</h6>
+						</button>
+					</div>
+				</div>
+			</div>
+
+			<button id="prev-portrait" aria-label="Previous Slide">&lt;</button>
+			<button id="next-portrait" aria-label="Next Slide">&gt;</button>
+		</main>
+
+		<canvas id="snowfall"></canvas>
+
+		<script src="scripts-snow.js" defer></script>
+	</body>
+</html>
