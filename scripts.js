@@ -52,6 +52,7 @@ function ResetPlayAndShow(audioSound, textDiv, audioImage) {
 
 	myAudio.pause();
 	myAudio.currentTime = 0;
+	myAudio.style.display = "none"; // Hide the audio controls
 	myText.style.display = "none";
 	myButton.src = "nav-images/play-g79150a13d_1280.png";
 }
@@ -103,6 +104,8 @@ function PlayAndShowWithNav(
 	navRightButton.style.visibility = "hidden";
 }
 
+
+// ResetPlayAndShowWithNav function to reset audio, hide elements, and hide slide navigation
 function ResetPlayAndShowWithNav(
 	audioSound,
 	textDiv,
@@ -127,6 +130,7 @@ function ResetPlayAndShowWithNav(
 
 	myAudio.pause();
 	myAudio.currentTime = 0;
+	myAudio.style.display = "none"; // Hide the audio controls
 	myText.style.display = "none";
 	myButton.src = "nav-images/play-g79150a13d_1280.png";
 	navLeftButton.style.visibility = "visible";
@@ -160,6 +164,75 @@ function PlaySound(audioSound, audioImage) {
 		myAudio.currentTime = 0;
 		myButton.src = "nav-images/play-g79150a13d_1280.png";
 	}
+}
+
+function PlaySoundWithControls(audioSoundId, audioImageId) {
+	// Define paths to your images for clarity and easier updates
+	const playImageSrc = "nav-images/play-g79150a13d_1280.png";
+	const stopImageSrc = "./nav-images/stop-g55029e04a_1280.png"; // Assuming this is your stop/pause icon
+
+	var myAudio = document.getElementById(audioSoundId);
+	var myButton = document.getElementById(audioImageId);
+
+	if (!myAudio) {
+		console.error("Audio element not found:", audioSoundId);
+		return;
+	}
+	// It's good practice to check for myButton too, though the original didn't explicitly
+	if (!myButton) {
+		console.warn("Audio button image element not found:", audioImageId);
+		// If the button isn't found, the rest of the audio logic can proceed,
+		// but image swapping will fail silently or error if not checked.
+	}
+
+	// Pause all other audio elements, hide their controls, and reset their states
+	var allAudioElements = document.querySelectorAll("audio");
+	allAudioElements.forEach(function (audio) {
+		if (audio.id !== audioSoundId) {
+			if (!audio.paused) {
+				// If another audio was actually playing
+				audio.pause();
+				audio.currentTime = 0;
+				// If you have a way to find the button associated with this 'audio' element,
+				// you would reset its image source to playImageSrc here.
+				// For example, if its button ID was audio.id.replace('audio', 'play'):
+				// var otherButton = document.getElementById(audio.id.replace('audio', 'play'));
+				// if (otherButton) otherButton.src = playImageSrc;
+			}
+			audio.style.display = "none"; // Hide controls for other audio elements
+		}
+	});
+
+	if (myAudio.paused) {
+		myAudio.style.display = "block"; // Or 'inline-block' depending on your layout needs
+		myAudio.play();
+		if (myButton) {
+			myButton.src = stopImageSrc;
+		}
+
+		// Using onended to prevent multiple listeners on the same element
+		myAudio.onended = function () {
+			// myAudio.pause(); // Audio is already paused when 'ended' fires
+			myAudio.currentTime = 0;
+			if (myButton) {
+				myButton.src = playImageSrc;
+			}
+			myAudio.style.display = "none"; // Hide controls when audio finishes
+		};
+	} else {
+		myAudio.pause();
+		myAudio.currentTime = 0; // As per your original logic, reset time on manual pause
+		if (myButton) {
+			myButton.src = playImageSrc;
+		}
+		myAudio.style.display = "none"; // Hide controls when manually paused
+	}
+
+	// Optional: If you want to hide the player when explicitly paused before it ends
+	// myAudio.style.display = "none";
+	// If you hide on manual pause, you might not want to reset currentTime immediately
+	// unless that's the desired behavior. For continuous play/pause, don't reset here.
+	// myAudio.currentTime = 0; // Consider if you want this on manual pause
 }
 
 function PlayQuickSound(audioSound) {

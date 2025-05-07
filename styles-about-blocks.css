@@ -7,6 +7,7 @@
 	height: 100%; /* Adjust height as needed */
     text-overflow: scroll; /* Enable text overflow scrolling */
 	padding: 3vw;
+	font-family: "Klee One";
 }
 
 .about-grid-item {

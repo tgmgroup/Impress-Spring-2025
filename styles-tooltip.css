@@ -3,7 +3,7 @@
     position: relative;
     display: inline;
     cursor: pointer;
-    color: rgb(247, 254, 162); /* Highlight the word */
+    color: var(--tooltip-color);
     margin: 0;
 }
 
@@ -11,8 +11,8 @@
 .tooltip .tooltiptext {
     visibility: hidden;
     width: 20vh;
-    background-color: #2f2e2e;
-    color: #fff;
+    background-color: var(--tooltip-bg-color);
+    color: var(--tooltip-text-color);
     text-align: center;
     border-radius: 2vh;
     padding: 1vh;

@@ -1,5 +1,5 @@
-/* style.css */
-/* Combined styles for layout, theme, slides, toggles, and effects */
+/* --- style.css --- */
+/* --- Combined styles for layout, theme, slides, toggles, and effects --- */
 
 /* ==========================================================================
    1. FONT SETUP
@@ -48,6 +48,9 @@
 	--link-hover-bg: #ffffffc2;
 	--cta-bg: var(--nav-icon-color);
 	--cta-text: var(--nav-bg); /* Light text for dark button in light mode */
+	--tooltip-color: rgb(117, 125, 0); /* Highlight the word */
+	--tooltip-text-color: #2f2e2e; /* Tooltip text color for light mode */
+	--tooltip-bg-color: #dddbdb; /* Tooltip background color for light mode */
 	--slide-button-bg: rgba(0, 0, 0, 0.3);
 	--slide-button-hover-bg: rgba(0, 0, 0, 0.6);
 	--slide-button-text: white;
@@ -86,6 +89,9 @@ html.dark {
 	--link-hover-bg: #000000ac;
 	--cta-bg: var(--nav-icon-color);
 	--cta-text: var(--nav-bg); /* Dark text for light button in dark mode */
+	--tooltip-color: rgb(247, 254, 162); /* Highlight the word */
+	--tooltip-text-color: #fff; /* Tooltip text color for dark mode */
+	--tooltip-bg-color: #2f2e2e; /* Tooltip background color for dark mode */
 	--slide-button-bg: rgba(255, 255, 255, 0.2);
 	--slide-button-hover-bg: rgba(255, 255, 255, 0.4);
 	--slide-button-text: white;
@@ -499,12 +505,12 @@ h1 {
 }
 
 h2 {
-	font-size: 2.7vw;
+	font-size: 2.1rem;
 	font-weight: bold;
 }
 
 h3 {
-	font-size: 2.5vw;
+	font-size: 2rem;
 	font-weight: bold;
 }
 
@@ -537,7 +543,7 @@ small {
 
 .credit-text-small {
 	font-size: 1vw; /* Mixes vw and vh, consider standardizing */
-	
+
 	font-family: "Noto Sans JP";
 	margin-left: 0.3vh;
 	line-height: 2;
@@ -879,6 +885,35 @@ a.button {
 	cursor: pointer;
 }
 
+/* --- Audio and Video Controls --- */
+audio {
+	display:block;
+	position: absolute;
+	width: 20vw;
+	height: 3.3vh;
+	top: 2.4vh; /* Adjust positioning */
+	left: calc(15px + 11vw);
+
+	z-index: 10; /* Ensure controls are above other content */
+
+	color: var(--text-color); /* Match close button style */
+	background-color: var(--bg-color); /* Match close button style */
+
+
+	cursor: pointer;
+	transition: color 0.2s;
+	z-index: 10; /* Ensure it's above other content */
+}
+
+audio controls {
+	background-color: var(--bg-color); /* Match close button style */
+	color: var(--text-color); /* Match close button style */
+	border-radius: 0.5vw; /* Rounded corners for controls */
+	box-shadow: var(--box-shadow); /* Shadow for depth */
+	padding: 0.5vw; /* Padding for aesthetics */
+	transition: background-color 0.3s ease, color 0.3s ease;
+}
+
 /* --- Media Queries --- */
 
 /* Landscape Orientation (Default styles seem landscape-first, so this might refine) */
@@ -993,15 +1028,20 @@ a.button {
 		right: calc(0px + 15px);
 	}
 	.credit-text {
-		
 		line-height: 1.1;
 		text-align: justify;
 		color: var(--text-color);
 	}
-	
-	.credit-text-small {
-		
-		line-height: 1.1;
 
+	.credit-text-small {
+		line-height: 1.1;
 	}
+
+	audio {
+		top: calc(5px + 4rem); /* Adjust positioning */
+		font-size: 10px; /* Match close button size - 2.5vw;*/
+		width: 60vw;
+	}
+
+
 }

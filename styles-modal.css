@@ -1,4 +1,27 @@
+/* --- styles-modal.css --- */
 /* --- Modal Styles --- */
+
+/* ==========================================================================
+   1. Font Setup
+   ========================================================================== */
+
+@font-face {
+	font-family: "Klee One";
+	src: url("font/kleeone_regular.ttf") format("truetype");
+	font-display: swap; /* Improves perceived performance */
+}
+
+@font-face {
+	font-family: "Noto Sans JP";
+	src: url("font/NotoSansJP-VariableFont_wght.ttf") format("truetype");
+	font-weight: 100;
+	font-style: normal;
+	font-display: swap; /* Improves perceived performance */
+}
+
+/* ==========================================================================
+   2. Hidden Text (Modal) Styles
+   ========================================================================== */
 
 .hidden-text {
 	/* Serves as the modal background/overlay */
@@ -19,6 +42,8 @@
 	/* Note: Padding-top method also works if flex is not desired */
 	padding-top: 0vh; /* Adjust as needed for vertical position */
 	padding-left: 60px; /* Adjust as needed for horizontal position */
+
+	font-family: "Klee One", cursive;
 }
 
 .modal-content {
@@ -28,23 +53,21 @@
 	margin: auto; /* Centered horizontally */
 	padding: 1%; /* Padding applied to header/body/footer */
 	border: 0px solid #888;
-	width: 90%; /* Responsive width */
+	width: 100%; /* Responsive width */
 	height: 100%;
-	
+
 	/* max-width: 800px;  Optional max-width */
-	
+
 	animation: animatetop 0.15s;
 }
 
 /* Text container with flexbox */
 .text-container {
-
 	max-width: 100%;
 	max-height: 100%;
 	width: 100%;
 	height: 100%;
 	box-shadow: var(--box-shadow);
-	
 }
 
 /* Modal Animation */
@@ -85,11 +108,12 @@
 	/* consider max-height and overflow: auto instead */
 	/* max-height: 75vh;  Example max height */
 	overflow-y: auto; /* Allow scrolling within modal body */
+	overflow-x: hidden; /* Prevent horizontal overflow */
+	padding-left: 1rem;
 	height: 85%;
 
 	color: var(--text-color);
 	background-color: var(--bg-color-text-divs);
-	
 }
 
 .modal-footer {
@@ -127,7 +151,6 @@
 	position: absolute;
 
 	top: 0.8%; /* Adjust positioning */
-
 
 	font-size: 20px; /* Adjust size */
 	font-weight: bold;
@@ -204,7 +227,6 @@
 	top: 0.8%; /* Adjust positioning */
 	right: 6vw; /* Adjust positioning */
 
-
 	z-index: 6; /* Ensure it's above the image */
 }
 
@@ -270,9 +292,9 @@ img.hover-shadow {
 	}
 
 	/* Modal Play Buttons */
-	
+
 	.modal-play-left {
-		top: calc(5px + 10%); /* Adjust positioning */
+		top: calc(5px + .1rem); /* Adjust positioning */
 
 		font-size: 10px; /* Match close button size - 2.5vw;*/
 	}
@@ -282,7 +304,7 @@ img.hover-shadow {
 		right: calc(5px + 5vw); /* Position relative to the right side */
 		font-size: 10px; /* Match close button size - 2.5vw;*/
 	}
-	
+
 	.modal-play-left {
 		left: calc(5px + 1.5vw); /* Position relative to the left side */
 	}
