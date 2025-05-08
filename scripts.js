@@ -104,7 +104,6 @@ function PlayAndShowWithNav(
 	navRightButton.style.visibility = "hidden";
 }
 
-
 // ResetPlayAndShowWithNav function to reset audio, hide elements, and hide slide navigation
 function ResetPlayAndShowWithNav(
 	audioSound,
@@ -399,6 +398,10 @@ const fullscreenButtons = document.querySelectorAll(".fullscreenButton");
 
 fullscreenButtons.forEach((button) => {
 	button.addEventListener("click", () => {
+		// Get the URL from the data-url attribute of the clicked button
+		// Old insecure method -- const urlToOpen = button.getAttribute("data-url");
+
+		// New secure method -- using URL constructor to validate and parse the URL
 		// Get the URL from the data-url attribute of the clicked button
 		let urlToOpen = button.getAttribute("data-url");
 

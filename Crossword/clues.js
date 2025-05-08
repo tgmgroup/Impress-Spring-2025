@@ -1,64 +1,93 @@
 var ttss = [
 		{
-			word: "stem",
-			clue: "The rose had a long (茎).",
+			word: "bloom",
+			clue: "Flowers (咲く) in spring.",
 		},
 		{
-			word: "long-stem",
-			clue: "(長い茎) roses are a traditional Valentine's Day gift.",
+			word: "",
+			clue: "",
 		},
+
+
+
+
+		blossom	開花
 		{
-			word: "wear",
-			clue: "Actors (着る) interesting clothes.",
+			word: "",
+			clue: "",
 		},
+		allergies	アレルギー
 		{
-			word: "while",
-			clue: "Many people eat (しながら) watching TV.",
+			word: "",
+			clue: "",
 		},
-		{
-			word: "problem",
-			clue: "There are many (問題) on a test.",
+		apparent	明らかな		{
+			word: "",
+			clue: "",
 		},
-		{
-			word: "actually",
-			clue: "Valentine's Day is (実際) older than White Day.",
+		hay fever	花粉症		{
+			word: "",
+			clue: "",
 		},
-		{
-			word: "pretzel",
-			clue: "A (🥨) is a snack from Germany.",
+		  pollen	花粉		{
+			word: "",
+			clue: "",
 		},
-		{
-			word: "celebrate",
-			clue: "We (祝う) Christmas on December 25th.",
+		occur	発生する (happen)		{
+			word: "",
+			clue: "",
 		},
-		{
-			word: "celebrated",
-			clue: "New Year's Day is (祝われる) on January 1st.",
+		immune system	免疫系		{
+			word: "",
+			clue: "",
 		},
-		{
-			word: "themselves",
-			clue: "Students should study for (彼ら自身), not for the teacher.",
+		react	反応する		{
+			word: "",
+			clue: "",
 		},
-		{
-			word: "instead",
-			clue: "I had an ice cream cake (代わり) of a shortcake fro my birthday.",
+		foreign	異物		{
+			word: "",
+			clue: "",
 		},
-		{
-			word: "matter",
-			clue: "I will go to the park, no (関係) if it rains.",
+		substance	物質		{
+			word: "",
+			clue: "",
 		},
-		{
-			word: "of",
-			clue: "I want a cheeseburger instead (に) a hot dog.",
+		antibodies	抗体		{
+			word: "",
+			clue: "",
 		},
-		{
-			word: "person",
-			clue: "We like you for the (人) that you are, not because of your money.",
+		germs	細菌		{
+			word: "",
+			clue: "",
 		},
-		{
-			word: "for",
-			clue: "You can buy a snack (のために) yourself.",
+		allergens	アレルゲン		{
+			word: "",
+			clue: "",
 		},
+		harmful	有害		{
+			word: "",
+			clue: "",
+		},
+		leads	原因となる		{
+			word: "",
+			clue: "",
+		},
+		symptoms	症状		{
+			word: "",
+			clue: "",
+		},
+		avoid	避ける 		{
+			word: "",
+			clue: "",
+		},
+		medications	薬 (medicine)		{
+			word: "",
+			clue: "",
+		},
+		come at a cost	犠牲を伴う
+		
+
 
 	],
 	appdata = { maincolor: "#a3f7a", qcount: 15 };
