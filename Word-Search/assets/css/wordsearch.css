@@ -173,3 +173,28 @@ body {
     flex: 1;
     margin-left: 0px; /* Adjust the margin as needed */
 }
+
+/* --- Media Queries --- */
+
+/* Landscape Orientation (Default styles seem landscape-first, so this might refine) */
+@media screen and (orientation: landscape) {
+	/* Styles specific to landscape */
+	/* Example: You might adjust grid columns or container sizes here */
+	/* The original rule is kept for reference, but check if #container base styles suffice */
+	#container {
+		height: 100vh; /* Full height of viewport */
+		/* width: 100vw; */ /* Already set */
+		/* max-width: 177.77vh; */ /* Aspect ratio constraint using vh */
+		/* height: 56.25vw; */ /* Already set */
+		/* max-height: 100vh; */ /* Already set */
+	}
+}
+
+/* Smaller Screens (Example: Tablets) */ /* --- Mobile Styles (screens <= 768px) --- and (orientation: portrait) and */
+@media screen and (max-width: 768px) {
+	#container {
+
+		flex-direction: column;
+
+	}
+}

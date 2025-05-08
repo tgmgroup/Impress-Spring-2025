@@ -88,34 +88,35 @@ body {
 
 #crossword {
 	text-align: left;
-    text-align: center;
-    vertical-align: middle;
+	text-align: center;
+	vertical-align: middle;
 }
 
 #container {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: flex-start;
 }
 
 .crossword {
-    display: flex;
+	display: flex;
 	border-collapse: collapse;
-    font-family: "Klee One", Courier, monospace;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    flex: 1;
-    text-align: center;
-    vertical-align: middle;
+	font-family: "Klee One", Courier, monospace;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	flex: 1;
+	text-align: center;
+	vertical-align: middle;
 }
 
 .cluebox {
-    display: flex;
-    text-align: center;
-    vertical-align: middle;
-    flex-direction: column;
-    flex: 1;
-    margin-left: 20px; /* Adjust the margin as needed */
+	display: flex;
+	text-align: center;
+	vertical-align: middle;
+	flex-direction: column;
+	flex: 1;
+	margin-left: 20px; /* Adjust the margin as needed */
 }
 
 .crossword td {
@@ -129,9 +130,6 @@ body {
 	height: 30px;
 }
 
-
-
-
 .no-border {
 	background-color: black;
 }
@@ -140,23 +138,22 @@ body {
 	border: none;
 }
 
-
-.clues{
-    text-align: center;
-    vertical-align: middle;
+.clues {
+	text-align: center;
+	vertical-align: middle;
 }
 #clues {
 	font-size: 20px;
 	margin: 1 auto;
-    line-height: 1.5;
-    padding
+	line-height: 1.5;
+	padding: 0px;
 }
 
 #clues td {
 	vertical-align: top;
 	margin: 0 auto;
 	text-align: left;
-    padding: 10px;
+	padding: 10px;
 }
 
 .canswer {
@@ -223,6 +220,29 @@ td:hover {
 }
 /* Solid border */
 hr.solid {
-    border-top: 1px solid #919090;
-    width: 100%;
-  }
+	border-top: 1px solid #919090;
+	width: 100%;
+}
+
+/* --- Media Queries --- */
+
+/* Landscape Orientation (Default styles seem landscape-first, so this might refine) */
+@media screen and (orientation: landscape) {
+	/* Styles specific to landscape */
+	/* Example: You might adjust grid columns or container sizes here */
+	/* The original rule is kept for reference, but check if #container base styles suffice */
+	#container {
+		height: 100vh; /* Full height of viewport */
+		/* width: 100vw; */ /* Already set */
+		/* max-width: 177.77vh; */ /* Aspect ratio constraint using vh */
+		/* height: 56.25vw; */ /* Already set */
+		/* max-height: 100vh; */ /* Already set */
+	}
+}
+
+/* Smaller Screens (Example: Tablets) */ /* --- Mobile Styles (screens <= 768px) --- and (orientation: portrait) and */
+@media screen and (max-width: 768px) {
+	#container {
+		flex-direction: column; /* Stack elements vertically */
+	}
+}

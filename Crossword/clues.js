@@ -4,91 +4,82 @@ var ttss = [
 			clue: "Flowers (咲く) in spring.",
 		},
 		{
-			word: "",
-			clue: "",
+			word: "blossom",
+			clue: "開花",
 		},
 
-
-
-
-		blossom	開花
 		{
-			word: "",
-			clue: "",
+			word: "allergies",
+			clue: "アレルギー",
 		},
-		allergies	アレルギー
 		{
-			word: "",
-			clue: "",
+			word: "apparent",
+			clue: "明らかな",
 		},
-		apparent	明らかな		{
-			word: "",
-			clue: "",
+		{
+			word: "hay fever",
+			clue: "花粉症",
 		},
-		hay fever	花粉症		{
-			word: "",
-			clue: "",
+		{
+			word: "pollen",
+			clue: "花粉",
 		},
-		  pollen	花粉		{
-			word: "",
-			clue: "",
+		{
+			word: "occur",
+			clue: "発生する (happen)",
 		},
-		occur	発生する (happen)		{
-			word: "",
-			clue: "",
+		{
+			word: "immune system",
+			clue: "免疫系",
 		},
-		immune system	免疫系		{
-			word: "",
-			clue: "",
+		{
+			word: "react",
+			clue: "反応する",
 		},
-		react	反応する		{
-			word: "",
-			clue: "",
+		{
+			word: "foreign",
+			clue: "異物",
 		},
-		foreign	異物		{
-			word: "",
-			clue: "",
+		{
+			word: "substance",
+			clue: "物質",
 		},
-		substance	物質		{
-			word: "",
-			clue: "",
+		{
+			word: "antibodies",
+			clue: "抗体",
 		},
-		antibodies	抗体		{
-			word: "",
-			clue: "",
+		{
+			word: "germs",
+			clue: "細菌",
 		},
-		germs	細菌		{
-			word: "",
-			clue: "",
+		{
+			word: "allergens",
+			clue: "アレルゲン",
 		},
-		allergens	アレルゲン		{
-			word: "",
-			clue: "",
+		{
+			word: "harmful",
+			clue: "有害",
 		},
-		harmful	有害		{
-			word: "",
-			clue: "",
+		{
+			word: "leads",
+			clue: "原因となる",
 		},
-		leads	原因となる		{
-			word: "",
-			clue: "",
+		{
+			word: "symptoms",
+			clue: "症状",
 		},
-		symptoms	症状		{
-			word: "",
-			clue: "",
+		{
+			word: "avoid",
+			clue: "避ける",
 		},
-		avoid	避ける 		{
-			word: "",
-			clue: "",
+		{
+			word: "medications",
+			clue: "薬 (medicine)",
 		},
-		medications	薬 (medicine)		{
-			word: "",
-			clue: "",
+		{
+			word: "come at a cost",
+			clue: "犠牲を伴う",
 		},
-		come at a cost	犠牲を伴う
-		
-
-
 	],
 	appdata = { maincolor: "#a3f7a", qcount: 15 };
 function saveData() {
