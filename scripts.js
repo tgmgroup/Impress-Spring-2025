@@ -400,7 +400,15 @@ const fullscreenButtons = document.querySelectorAll(".fullscreenButton");
 fullscreenButtons.forEach((button) => {
 	button.addEventListener("click", () => {
 		// Get the URL from the data-url attribute of the clicked button
-		const urlToOpen = button.getAttribute("data-url");
+		let urlToOpen = button.getAttribute("data-url");
+
+		try {
+			const parsedUrl = new URL(urlToOpen, window.location.origin); // Validate and parse the URL
+			urlToOpen = parsedUrl.href; // Use the sanitized URL
+		} catch (error) {
+			console.error("Invalid URL in data-url attribute:", urlToOpen);
+			return; // Exit the function if the URL is invalid
+		}
 
 		if (document.fullscreenElement === null) {
 			window.location.href = urlToOpen;
