@@ -887,7 +887,7 @@ a.button {
 
 /* --- Audio and Video Controls --- */
 audio {
-	display:block;
+	display: block;
 	position: absolute;
 	width: 20vw;
 	height: 3.3vh;
@@ -898,7 +898,6 @@ audio {
 
 	color: var(--text-color); /* Match close button style */
 	background-color: var(--bg-color); /* Match close button style */
-
 
 	cursor: pointer;
 	transition: color 0.2s;
@@ -944,10 +943,24 @@ audio controls {
 		align-items: center;
 		padding-top: 0;
 		padding-bottom: 0;
-		padding-left: 10px;
-		padding-right: 10px;
-		gap: 5px;
+		padding-left: 5px;
+		padding-right: 5px;
+		gap: 1px;
 	}
+
+	#icon-nav a,
+	#icon-nav button {
+		font-size: 18px;
+
+		padding: 3px;
+		border-radius: 3px;
+
+		width: 15px;
+		height: 15px;
+		flex-shrink: 0;
+		box-shadow: var(--box-shadow);
+	}
+
 	#theme-toggle,
 	#snow-toggle {
 		margin-top: 0;
@@ -1042,6 +1055,4 @@ audio controls {
 		font-size: 10px; /* Match close button size - 2.5vw;*/
 		width: 60vw;
 	}
-
-
 }
