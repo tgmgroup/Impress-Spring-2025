@@ -24,8 +24,9 @@
 	background-color: white;
 }
 
+/* --- Main Background Color --- */
 body {
-	background-color: #09096839;
+	background-color: #026800;
 }
 
 .header {
@@ -77,19 +78,19 @@ body {
 }
 
 .cell:hover {
-	background-color: rgb(151, 141, 242);
+	background-color: rgb(141, 242, 144);
 }
 
 .cell.selectable {
-	background-color: rgb(206, 206, 234);
+	background-color: rgb(206, 234, 213);
 }
 
 .cell.selected {
-	background-color: rgb(106, 90, 205);
+	background-color: rgb(90, 205, 98);
 }
 
 .cell.found {
-	background-color: rgb(158, 123, 158);
+	background-color: rgb(123, 158, 127);
 	border: 1px black solid;
 	font-weight: bold;
 }
@@ -114,7 +115,7 @@ body {
 }
 
 .listWord.found {
-	color: rgb(158, 123, 158);
+	color: rgb(123, 158, 130);
 	text-decoration: line-through;
 }
 
