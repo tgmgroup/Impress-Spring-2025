@@ -20,19 +20,19 @@ function PlayAndShow(audioSound, textDiv, audioImage) {
 	if (myAudio.paused) {
 		//myAudio.play();
 		myText.style.display = "flex";
-		myButton.src = "./nav-images/stop-g55029e04a_1280.png";
+		myButton.src = "./assets/nav-images/stop-g55029e04a_1280.png";
 		// myAudio.onended = ResetPlayAndShow(myAudio, myText, myButton);
 		myAudio.addEventListener("ended", function () {
 			myAudio.pause();
 			myAudio.currentTime = 0;
 			myText.style.display = "none";
-			myButton.src = "nav-images/play-g79150a13d_1280.png";
+			myButton.src = "./assets/nav-images/play-g79150a13d_1280.png";
 		});
 	} else {
 		myAudio.pause();
 		myAudio.currentTime = 0;
 		myText.style.display = "none";
-		myButton.src = "nav-images/play-g79150a13d_1280.png";
+		myButton.src = "./assets/nav-images/play-g79150a13d_1280.png";
 	}
 }
 
@@ -54,7 +54,7 @@ function ResetPlayAndShow(audioSound, textDiv, audioImage) {
 	myAudio.currentTime = 0;
 	myAudio.style.display = "none"; // Hide the audio controls
 	myText.style.display = "none";
-	myButton.src = "nav-images/play-g79150a13d_1280.png";
+	myButton.src = "./assets/nav-images/play-g79150a13d_1280.png";
 }
 
 function PlayAndShowWithNav(
@@ -85,19 +85,19 @@ function PlayAndShowWithNav(
 	if (myAudio.paused) {
 		//myAudio.play();
 		myText.style.display = "flex";
-		myButton.src = "./nav-images/stop-g55029e04a_1280.png";
+		myButton.src = "./assets/nav-images/stop-g55029e04a_1280.png";
 		// myAudio.onended = ResetPlayAndShow(myAudio, myText, myButton);
 		myAudio.addEventListener("ended", function () {
 			myAudio.pause();
 			myAudio.currentTime = 0;
 			myText.style.display = "none";
-			myButton.src = "nav-images/play-g79150a13d_1280.png";
+			myButton.src = "./assets/nav-images/play-g79150a13d_1280.png";
 		});
 	} else {
 		myAudio.pause();
 		myAudio.currentTime = 0;
 		myText.style.display = "none";
-		myButton.src = "nav-images/play-g79150a13d_1280.png";
+		myButton.src = "./assets/nav-images/play-g79150a13d_1280.png";
 	}
 
 	navLeftButton.style.visibility = "hidden";
@@ -131,7 +131,7 @@ function ResetPlayAndShowWithNav(
 	myAudio.currentTime = 0;
 	myAudio.style.display = "none"; // Hide the audio controls
 	myText.style.display = "none";
-	myButton.src = "nav-images/play-g79150a13d_1280.png";
+	myButton.src = "./assets/nav-images/play-g79150a13d_1280.png";
 	navLeftButton.style.visibility = "visible";
 	navRightButton.style.visibility = "visible";
 }
@@ -151,24 +151,24 @@ function PlaySound(audioSound, audioImage) {
 
 	if (myAudio.paused) {
 		myAudio.play();
-		myButton.src = "./nav-images/stop-g55029e04a_1280.png";
+		myButton.src = "./assets/nav-images/stop-g55029e04a_1280.png";
 
 		myAudio.addEventListener("ended", function () {
 			myAudio.pause();
 			myAudio.currentTime = 0;
-			myButton.src = "nav-images/play-g79150a13d_1280.png";
+			myButton.src = "./assets/nav-images/play-g79150a13d_1280.png";
 		});
 	} else {
 		myAudio.pause();
 		myAudio.currentTime = 0;
-		myButton.src = "nav-images/play-g79150a13d_1280.png";
+		myButton.src = "./assets/nav-images/play-g79150a13d_1280.png";
 	}
 }
 
 function PlaySoundWithControls(audioSoundId, audioImageId) {
 	// Define paths to your images for clarity and easier updates
-	const playImageSrc = "nav-images/play-g79150a13d_1280.png";
-	const stopImageSrc = "./nav-images/stop-g55029e04a_1280.png"; // Assuming this is your stop/pause icon
+	const playImageSrc = "./assets/nav-images/play-g79150a13d_1280.png";
+	const stopImageSrc = "./assets/nav-images/stop-g55029e04a_1280.png"; // Assuming this is your stop/pause icon
 
 	var myAudio = document.getElementById(audioSoundId);
 	var myButton = document.getElementById(audioImageId);
@@ -220,7 +220,7 @@ function PlaySoundWithControls(audioSoundId, audioImageId) {
 		};
 	} else {
 		myAudio.pause();
-		myAudio.currentTime = 0; // As per your original logic, reset time on manual pause
+		// myAudio.currentTime = 0; // As per your original logic, reset time on manual pause, if commented out, does not reset time and will continue from last position
 		if (myButton) {
 			myButton.src = playImageSrc;
 		}
@@ -262,23 +262,23 @@ function PlayAndShowGallery(audioSound, textDiv, audioImage) {
 
 	myButton.style.visibility = "visible";
 
-	myButton.src = "nav-images/stop-g55029e04a_1280.png";
+	myButton.src = "./assets/nav-images/stop-g55029e04a_1280.png";
 	if (myAudio.paused) {
 		myAudio.play();
 		//myText.style.display = "flex";
-		myButton.src = "./nav-images/stop-g55029e04a_1280.png";
+		myButton.src = "./assets/nav-images/stop-g55029e04a_1280.png";
 		// myAudio.onended = ResetPlayAndShow(myAudio, myText, myButton);
 		myAudio.addEventListener("ended", function () {
 			myAudio.pause();
 			myAudio.currentTime = 0;
 			//myText.style.display = "none";
-			myButton.src = "nav-images/play-g79150a13d_1280.png";
+			myButton.src = "./assets/nav-images/play-g79150a13d_1280.png";
 		});
 	} else {
 		myAudio.pause();
 		myAudio.currentTime = 0;
 		//myText.style.display = "none";
-		myButton.src = "nav-images/play-g79150a13d_1280.png";
+		myButton.src = "./assets/nav-images/play-g79150a13d_1280.png";
 	}
 }
 
@@ -291,7 +291,7 @@ function ResetPlayAndShowGallery(audioSound, textDiv, audioImage) {
 	myAudio.currentTime = 0;
 	//myText.style.display = "none";
 	myButton.style.visibility = "hidden";
-	myButton.src = "nav-images/play-g79150a13d_1280.png";
+	myButton.src = "./assets/nav-images/play-g79150a13d_1280.png";
 }
 
 function playHoverSoundOnClass(className) {

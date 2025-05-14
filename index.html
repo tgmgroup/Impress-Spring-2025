@@ -10,11 +10,11 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 		<title>Impress Magazine - Spring, 2025</title>
-		<link rel="stylesheet" href="styles.css" />
-		<link rel="icon" type="image/x-icon" href="nav-images/logo.png" />
-		<link id="favicon" rel="shortcut icon" href="nav-images/logo.png" />
+		<link rel="stylesheet" href="/assets/css/styles.css" />
+		<link rel="icon" type="image/x-icon" href="/assets/nav-images/logo.png" />
+		<link id="favicon" rel="shortcut icon" href="/assets/nav-images/logo.png" />
 
-		<link href="styles-modal.css" rel="stylesheet" />
+		<link href="/assets/css/styles-modal.css" rel="stylesheet" />
 		<!-- Unused stylesheets for now -->
 		<!-- 
 		<link href="styles-slideshow.css" rel="stylesheet" />
@@ -24,8 +24,7 @@
 		<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
 		-->
 
-		<script src="https://unpkg.com/lodash@4.17.21/lodash.min.js"></script>
-		<script type="text/javascript" src="scripts.js"></script>
+		<script type="text/javascript" src="/assets/scripts/scripts.js"></script>
 
 		<script>
 			(function () {
@@ -89,7 +88,7 @@
 					class="item content-center"
 					id="page-content"
 					style="
-						background-image: url('Web/page00.jpg');
+						background-image: url('/assets/Web/page00.jpg');
 						background-size: contain;
 						background-position: center;
 						background-repeat: no-repeat;
@@ -97,28 +96,26 @@
 					data-page-number="0"
 					data-prev-page="about.html"
 					data-next-page="1.html"
-					data-landscape-bg="Web/page00.jpg"
-					data-portrait-left="Web/page00.jpg"
-					data-portrait-right="Web/page01.jpg"
+					data-landscape-bg="/assets/Web/page00.jpg"
 				>
 					<div class="left-content">
-						<div class="items hidden-text" id="text1-0">
+						<div class="items hidden-text" id="text1-1">
 							<!-- Modal content -->
 							<div class="modal-content">
 								<div class="text-container">
 									<div class="modal-header">
 										<span
 											class="close clickable"
-											onClick="ResetPlayAndShowWithNav('audio1-0', 'text1-0', 'play1-0', 'prev-portrait', 'next-portrait'), ResetPlayAndShowWithNav('audio1-0', 'text1-0', 'play1-0a', 'prev-portrait', 'next-portrait')"
+											onClick="ResetPlayAndShowWithNav('audio1-1', 'text1-1', 'play1-1', 'prev-portrait', 'next-portrait'), ResetPlayAndShowWithNav('audio1-1a', 'text1-1', 'play1-1a', 'prev-portrait', 'next-portrait')"
 											>&times;</span
 										>
 										<span
 											class="modal-play-left clickable"
-											onClick="PlaySound('audio1-0', 'play1-0a')"
+											onClick="PlaySoundWithControls('audio1-1a', 'play1-1a')"
 											><img
-												id="play1-0a"
+												id="play1-1a"
 												class="audio-button-image clickable"
-												src="nav-images/play-g79150a13d_1280.png"
+												src="/assets/nav-images/play-g79150a13d_1280.png"
 										/></span>
 									</div>
 
@@ -162,15 +159,16 @@
 												text-align: justify;
 											"
 										>
-											Because this issue is about hidden things, we want to
-											remind you that our lives are not only the things we see
-											and think about. For example, we spend a lot of our days
-											in schools, doing homework, or using our phones, but do
-											you spend a lot of time folding clothes, washing dishes,
-											or cleaning the house? If you think about it, there are a
-											lot of people doing things for us all the time. Spring is
-											the season for Mother's Day and Father's Day, so remember
-											to say thank you to the people you care about for all the
+											And because this issue is about hidden things, we want you
+											to remember that our lives are not just the things we see
+											and think about. For example, you might spend a lot of
+											time in school, doing homework, or using your phone, but
+											someone else might be spending their time doing laundry,
+											washing dishes, or cleaning the house. If you think about
+											it, there are a lot of people doing things for us all the
+											time, especially our friends and families. Spring is the
+											season for Mother's Day and Father's Day, so remember to
+											say thank you to the people you care about for all the
 											good things that they do.
 										</p>
 										<p
@@ -184,8 +182,8 @@
 											"
 										>
 											We hope you enjoy reading this issue, and we hope to hear
-											what you think about it! We'd love to hear your comments
-											and ideas for the next issue.
+											what you think about it! Use the comment form to send us
+											your comments. We're looking forward to hearing from you!
 										</p>
 									</div>
 									<div class="modal-footer"></div>
@@ -195,8 +193,19 @@
 
 						<!-- Audio for Intro Text -->
 
-						<audio id="audio1-0" class="playondemand">
-							<source src="./audio/audio0-1.mp3" type="audio/mp3" />
+						<audio id="audio1-1" class="playondemand">
+							<!-- empty audio, just used to open the modal -->
+							<source src="./assets/audio/audio0-0.mp3" type="audio/mp3" />
+						</audio>
+
+						<audio
+							id="audio1-1a"
+							class="playondemand"
+							controls
+							style="display: none"
+						>
+							<source src="./assets/audio/audio0-1.mp3" type="audio/mpeg" />
+							Your browser does not support the audio element.
 						</audio>
 					</div>
 				</div>
@@ -206,15 +215,51 @@
 					<button
 						class="center-items right-nav-buttons clickable"
 						type="button"
-						onClick="PlayAndShowWithNav('audio1-0', 'text1-0', 'play1-0', 'prev-portrait', 'next-portrait')"
+						onClick="PlayAndShowWithNav('audio1-1', 'text1-1', 'play1-1', 'prev-portrait', 'next-portrait')"
 					>
 						<img
-							id="play1-0"
+							id="play1-1"
 							class="audio-button-image clickable"
-							src="nav-images/play-g79150a13d_1280.png"
+							src="/assets/nav-images/play-g79150a13d_1280.png"
 						/>
 						<h6 style="margin: auto">Introduction</h6>
 					</button>
+
+					<form
+						action="https://sites.google.com/isesaki-school.ed.jp/impress-spring-2025"
+						method="get"
+						target="_blank"
+					>
+						<button
+							class="center-items right-nav-buttons clickable"
+							type="submit"
+						>
+							<img
+								id="play1-2"
+								class="audio-button-image clickable"
+								src="/assets/nav-images/link.png"
+							/>
+							<h6 style="margin: auto">Materials for This Issue</h6>
+						</button>
+					</form>
+
+					<form
+						action="https://sites.google.com/isesaki-school.ed.jp/impress/contact"
+						method="get"
+						target="_blank"
+					>
+						<button
+							class="center-items right-nav-buttons clickable"
+							type="submit"
+						>
+							<img
+								id="play1-3"
+								class="audio-button-image clickable"
+								src="/assets/nav-images/link.png"
+							/>
+							<h6 style="margin: auto">Contact Us</h6>
+						</button>
+					</form>
 				</div>
 			</div>
 
@@ -224,7 +269,7 @@
 
 		<canvas id="snowfall"></canvas>
 
-		<script src="scripts-snow.js" defer></script>
-		<script src="scripts-magazine-nav.js"></script>
+		<script src="/assets/scripts/scripts-snow.js" defer></script>
+		<script src="/assets/scripts/scripts-magazine-nav.js"></script>
 	</body>
 </html>

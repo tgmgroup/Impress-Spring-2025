@@ -8,24 +8,15 @@
 		/>-->
 
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		
+
 		<title>Impress Magazine - Spring, 2025</title>
-		<link rel="stylesheet" href="styles.css" />
-		<link rel="icon" type="image/x-icon" href="nav-images/logo.png" />
-		<link id="favicon" rel="shortcut icon" href="nav-images/logo.png" />
+		<link rel="stylesheet" href="/assets/css/styles.css" />
+		<link rel="icon" type="image/x-icon" href="/assets/nav-images/logo.png" />
+		<link id="favicon" rel="shortcut icon" href="/assets/nav-images/logo.png" />
 
-		<link href="styles-modal.css" rel="stylesheet" />
-		<!-- Unused stylesheets for now -->
-		<!-- 
-		<link href="styles-slideshow.css" rel="stylesheet" />
-		<link href="styles-slideshow-double.css" rel="stylesheet" />
-		<link href="styles-tooltip.css" rel="stylesheet" />
-		<link href="styles-modal-split.css" rel="stylesheet" /> 
-		<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
-		-->
+		<link href="/assets/css/styles-modal.css" rel="stylesheet" />
 
-		<script src="https://unpkg.com/lodash@4.17.21/lodash.min.js"></script>
-		<script type="text/javascript" src="scripts.js"></script>
+		<script type="text/javascript" src="/assets/scripts/scripts.js"></script>
 
 		<script>
 			(function () {
@@ -89,7 +80,7 @@
 					class="item content-center"
 					id="page-content"
 					style="
-						background-image: url('Web/page07.jpg');
+						background-image: url('/assets/Web/page07.jpg');
 						background-size: contain;
 						background-position: center;
 						background-repeat: no-repeat;
@@ -97,27 +88,26 @@
 					data-page-number="7"
 					data-prev-page="5.html"
 					data-next-page="about.html"
-					data-landscape-bg="Web/page07.jpg"
-
+					data-landscape-bg="/assets/Web/page07.jpg"
 				>
 					<div class="left-content">
-						<div class="items hidden-text" id="text1-0">
+						<div class="items hidden-text" id="text1-1">
 							<!-- Modal content -->
 							<div class="modal-content">
 								<div class="text-container">
 									<div class="modal-header">
 										<span
 											class="close clickable"
-											onClick="ResetPlayAndShowWithNav('audio1-0', 'text1-0', 'play1-0', 'prev-portrait', 'next-portrait'), ResetPlayAndShowWithNav('audio1-0', 'text1-0', 'play1-0a', 'prev-portrait', 'next-portrait')"
+											onClick="ResetPlayAndShowWithNav('audio1-1', 'text1-1', 'play1-1', 'prev-portrait', 'next-portrait'), ResetPlayAndShowWithNav('audio1-1a', 'text1-1', 'play1-1a', 'prev-portrait', 'next-portrait')"
 											>&times;</span
 										>
 										<span
 											class="modal-play-left clickable"
-											onClick="PlaySound('audio1-0', 'play1-0a')"
+											onClick="PlaySoundWithControls('audio1-1a', 'play1-1a')"
 											><img
-												id="play1-0a"
+												id="play1-1a"
 												class="audio-button-image clickable"
-												src="nav-images/play-g79150a13d_1280.png"
+												src="/assets/nav-images/play-g79150a13d_1280.png"
 										/></span>
 									</div>
 
@@ -159,24 +149,34 @@
 
 						<!-- Audio for Intro Text -->
 
-						<audio id="audio1-0" class="playondemand">
-							<source src="./audio/audio0-1.mp3" type="audio/mp3" />
+						<audio id="audio1-1" class="playondemand">
+							<!-- empty audio, just used to open the modal -->
+							<source src="./assets/audio/audio7-0.mp3" type="audio/mp3" />
+						</audio>
+
+						<audio
+							id="audio1-1a"
+							class="playondemand"
+							controls
+							style="display: none"
+						>
+							<source src="./assets/audio/audio7-1.mp3" type="audio/mpeg" />
+							Your browser does not support the audio element.
 						</audio>
 					</div>
 				</div>
 
 				<div class="item sidebar sidebar-right">
-					
 					<!-- Buttons -->
 					<button
 						class="center-items right-nav-buttons clickable"
 						type="button"
-						onClick="PlayAndShowWithNav('audio1-0', 'text1-0', 'play1-0', 'prev-portrait', 'next-portrait')"
+						onClick="PlayAndShowWithNav('audio1-1', 'text1-1', 'play1-1', 'prev-portrait', 'next-portrait')"
 					>
 						<img
-							id="play1-0"
+							id="play1-1"
 							class="audio-button-image clickable"
-							src="nav-images/play-g79150a13d_1280.png"
+							src="/assets/nav-images/play-g79150a13d_1280.png"
 						/>
 						<h6 style="margin: auto">Closing</h6>
 					</button>
@@ -193,9 +193,9 @@
 							<img
 								id="play1-2"
 								class="audio-button-image clickable"
-								src="nav-images/link.png"
+								src="/assets/nav-images/link.png"
 							/>
-							<h6 style="margin: auto">Impress Online</h6>
+							<h6 style="margin: auto">Materials for This Issue</h6>
 						</button>
 					</form>
 
@@ -211,7 +211,7 @@
 							<img
 								id="play1-3"
 								class="audio-button-image clickable"
-								src="nav-images/link.png"
+								src="/assets/nav-images/link.png"
 							/>
 							<h6 style="margin: auto">Contact Us</h6>
 						</button>
@@ -225,7 +225,7 @@
 
 		<canvas id="snowfall"></canvas>
 
-		<script src="scripts-snow.js" defer></script>
-		<script src="scripts-magazine-nav.js"></script>
+		<script src="/assets/scripts/scripts-snow.js" defer></script>
+		<script src="/assets/scripts/scripts-magazine-nav.js"></script>
 	</body>
 </html>
