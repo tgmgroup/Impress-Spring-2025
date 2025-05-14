@@ -141,7 +141,7 @@ body {
 	align-items: center;
 	padding-top: 20px;
 	padding-bottom: 20px;
-	gap: 15px;
+	gap: 12px;
 	z-index: 10;
 	transition: background-color 0.3s ease, width 0.3s ease, height 0.3s ease,
 		top 0.3s ease, right 0.3s ease, left 0.3s ease, bottom 0.3s ease,
@@ -929,8 +929,8 @@ audio controls {
 	}
 }
 
-/* Smaller Screens (Example: Tablets) */ /* --- Mobile Styles (screens <= 768px) --- and (orientation: portrait) and */
-@media screen and (max-width: 768px) {
+/* Smaller Screens (Example: Tablets) (screens <= 768px) or Portrait Mode */
+@media screen and (max-width: 768px), screen and (orientation: portrait) {
 	#icon-nav {
 		top: 0;
 		right: 0;
@@ -1041,13 +1041,15 @@ audio controls {
 		right: calc(0px + 15px);
 	}
 	.credit-text {
-		line-height: 1.1;
+		font-size: xxx-small;
+		line-height: 1;
 		text-align: justify;
 		color: var(--text-color);
 	}
 
 	.credit-text-small {
-		line-height: 1.1;
+		font-size: xxx-small;
+		line-height: 1;
 	}
 
 	audio {

@@ -150,8 +150,8 @@
 	/* The original rule is kept for reference, but check if #container base styles suffice */
 }
 
-/* Smaller Screens (Example: Tablets) */ /* --- Mobile Styles (screens <= 768px) --- and (orientation: portrait) and */
-@media screen and (max-width: 768px) {
+/* Smaller Screens (Example: Tablets) (screens <= 768px) or Portrait Mode */
+@media screen and (max-width: 768px), screen and (orientation: portrait) {
 	.modal-content-slideshow {
 		padding-top: 60px; /* Adjust for mobile header */
 	}

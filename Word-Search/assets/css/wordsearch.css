@@ -26,9 +26,9 @@
 
 /* --- Main Background Color --- */
 body {
-	background-color: #026800;
+	background-image: linear-gradient(203deg, #ffc3fbbe 0%, #e4a8fab8 30%);
 }
-
+	
 .header {
 	background-color: white;
 	color: rgb(0, 0, 0);
