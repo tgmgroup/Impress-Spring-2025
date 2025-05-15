@@ -1,85 +1,84 @@
 var ttss = [
-		{
-			word: "bloom",
-			clue: "Flowers (咲く) in spring.",
-		},
-		{
-			word: "blossom",
-			clue: "開花",
-		},
-
-		{
-			word: "allergies",
-			clue: "アレルギー",
-		},
-		{
-			word: "apparent",
-			clue: "明らかな",
-		},
-		{
-			word: "hay fever",
-			clue: "花粉症",
-		},
-		{
-			word: "pollen",
-			clue: "花粉",
-		},
-		{
-			word: "occur",
-			clue: "発生する (happen)",
-		},
-		{
-			word: "immune system",
-			clue: "免疫系",
-		},
-		{
-			word: "react",
-			clue: "反応する",
-		},
-		{
-			word: "foreign",
-			clue: "異物",
-		},
-		{
-			word: "substance",
-			clue: "物質",
-		},
-		{
-			word: "antibodies",
-			clue: "抗体",
-		},
-		{
-			word: "germs",
-			clue: "細菌",
-		},
-		{
-			word: "allergens",
-			clue: "アレルゲン",
-		},
-		{
-			word: "harmful",
-			clue: "有害",
-		},
-		{
-			word: "leads",
-			clue: "原因となる",
-		},
-		{
-			word: "symptoms",
-			clue: "症状",
-		},
-		{
-			word: "avoid",
-			clue: "避ける",
-		},
-		{
-			word: "medications",
-			clue: "薬 (medicine)",
-		},
-		{
-			word: "come at a cost",
-			clue: "犠牲を伴う",
-		},
+	{
+        word: "bloom",
+        clue: "Flowers (咲く) in spring. They open up.",
+    },
+    {
+        word: "blossom",
+        clue: "Cherry (開花) and plum trees have these beautiful flowers in spring.",
+    },
+    {
+        word: "allergies",
+        clue: "If you have peanut (アレルギー), eating peanuts makes you sick.",
+    },
+    {
+        word: "apparent",
+        clue: "The boy was crying. It was very (明らかな) that he was sad.",
+    },
+    {
+        word: "hay fever",
+        clue: "(花粉症) makes people sneeze and have itchy eyes in spring.",
+    },
+    {
+        word: "pollen",
+        clue: "Flowers make yellow (花粉) in spring.",
+    },
+    {
+        word: "occur",
+        clue: "When did the earthquake (発生する - happen)?",
+    },
+    {
+        word: "immune system",
+        clue: "Your body's (免疫系) fights bad things like germs.",
+    },
+    {
+        word: "react",
+        clue: "Your body will (反応する) to pollen with sneezing and runny noses.",
+    },
+    {
+        word: "foreign",
+        clue: "Your body sees things like pollen as (異物), not part of you.",
+    },
+    {
+        word: "substance",
+        clue: "Water is a liquid (物質).",
+    },
+    {
+        word: "antibodies",
+        clue: "Your body makes (抗体) to fight sickness.",
+    },
+    {
+        word: "germs",
+        clue: "If you don't wash your hands, you will have many (細菌) on them.",
+    },
+    {
+        word: "allergens",
+        clue: "Pollen and dust are (アレルゲン) that give you hay fever.",
+    },
+    {
+        word: "harmful",
+        clue: "Things that are bad for you are (有害).",
+    },
+    {
+        word: "leads",
+        clue: "Eating healthy food (原因となる) to a strong body.",
+    },
+    {
+        word: "symptoms",
+        clue: "Fever and a cough are (症状) that you are sick.",
+    },
+    {
+        word: "avoid",
+        clue: "Don't go to dangerous places. You should (避ける) them.",
+    },
+    {
+        word: "medications",
+        clue: "Take some (薬 - medicine) to help you feel better.",
+    },
+    {
+        word: "come at a cost",
+        clue: "Everything will (犠牲を伴う). Nothing is free or easy.",
+    },
 	],
 	appdata = { maincolor: "#a3f7a", qcount: 15 };
 function saveData() {

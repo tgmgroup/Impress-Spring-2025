@@ -134,6 +134,7 @@ body {
 	color: var(--text-color);
 	font-size: 20px;
 	font-weight: bold;
+	max-width: 100vw;
 	padding: 10px;
 	margin: 10px auto 10px auto;
 	border: var(--border-style);
@@ -311,5 +312,25 @@ body {
 	#container {
 		flex-direction: column;
 		min-width: 620px;
+		margin: 0px;
+	}
+	#wordboard {
+		padding: 0.5%;
+		margin: 0px;
+	}
+
+	.wordboardcontainer {
+		padding: 5px;
+		margin: 0px;
+	}
+
+	body {
+		padding: 1px;
+		margin: 0px;
+	}
+
+	header {
+		padding: 1px;
+		margin: 0px;
 	}
 }

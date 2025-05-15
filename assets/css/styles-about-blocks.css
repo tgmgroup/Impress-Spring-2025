@@ -1,10 +1,7 @@
 .about-grid-container {
-	display: flex;
-	flex-direction: row;
-	gap: 1vw; /* Adjust the gap between blocks */
-	width: 100%; /* Adjust width as needed */
-	height: 100%; /* Adjust height as needed */
-    text-overflow: scroll; /* Enable text overflow scrolling */
+	align-items: stretch;
+	gap: 2vw; /* Adjust the gap between blocks */
+
 	padding: 3vw;
 	font-family: "Klee One";
 }
@@ -15,9 +12,6 @@
 	/* border: 1px solid #cccccc0f;  Border around blocks */
 	border-radius: 0.5vw; /* Rounded corners for blocks */
 
-	flex: 50%;
-	flex-grow: 1;
-
 	box-shadow: var(--box-shadow); /* Box shadow for depth */
 	-webkit-animation-name: animatetop;
 	-webkit-animation-duration: 0.4s;
@@ -27,9 +21,5 @@
 	align-items: left;
 	text-align: left;
 
-	padding: 1vw;
-	tab-size: 1vw;
-	
+	tab-size: 2vw;
 }
-
-

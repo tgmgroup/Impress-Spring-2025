@@ -961,6 +961,23 @@ audio controls {
 		box-shadow: var(--box-shadow);
 	}
 
+
+	h1 {
+		font-size: 3vw;
+		font-weight: bold;
+	}
+	
+	h2 {
+		font-size: 1.5rem;
+		font-weight: bold;
+	}
+	
+	h3 {
+		font-size: 1.3rem;
+		font-weight: bold;
+	}
+
+
 	#theme-toggle,
 	#snow-toggle {
 		margin-top: 0;
