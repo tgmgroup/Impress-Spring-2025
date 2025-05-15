@@ -1,13 +1,13 @@
 @font-face {
 	font-family: "Klee One";
-	src: url("../../../font/kleeone_regular.ttf") format("truetype");
+	src: url("../../../../assets/font/kleeone_regular.ttf") format("truetype");
 
 	font-weight: normal;
 }
 
 @font-face {
 	font-family: "Klee One";
-	src: url("../../../font/kleeone_semibold.ttf") format("truetype");
+	src: url("../../../../assets/font/kleeone_semibold.ttf") format("truetype");
 
 	font-weight: bold;
 }
